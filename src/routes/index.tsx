@@ -11,6 +11,8 @@ import {
   Headphones,
   Radio,
   ShieldCheck,
+  ClipboardCheck,
+  Wrench,
   Users,
   Wind,
 } from "lucide-react";
