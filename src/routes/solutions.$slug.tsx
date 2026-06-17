@@ -86,7 +86,8 @@ export const Route = createFileRoute("/solutions/$slug")({
 
 function SolutionDetail() {
   const s = Route.useLoaderData();
-  const { t } = useLang();
+  const { t, lang } = useLang();
+  const features = lang === "id" ? s.idFeatures : s.enFeatures;
 
   return (
     <>
@@ -104,8 +105,25 @@ function SolutionDetail() {
               {t("Apa yang termasuk.", "What's included.")}
             </h2>
             <ul className="mt-10 grid gap-4 sm:grid-cols-2">
-              {(t("__", "__") === "__" ? null : null) /* noop */}
-              {(useLang().lang === "id" ? s.idFeatures : s.enFeatures).map((f) => (
+              {features.map((f: string) => (
+                <li key={f} className="flex items-start gap-3 border-t border-line pt-4">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-brand" strokeWidth={1.5} />
+                  <span className="text-[15px] text-ink">{f}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-10">
+              <PrimaryCTA to="/contact">{t("Minta Konsultasi", "Request Consultation")}</PrimaryCTA>
+            </div>
+          </div>
+          <div className="lg:col-span-5">
+            <LeadForm variant="consultation" />
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
                 <li key={f} className="flex items-start gap-3 border-t border-line pt-4">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-brand" strokeWidth={1.5} />
                   <span className="text-[15px] text-ink">{f}</span>
