@@ -124,21 +124,3 @@ function SolutionDetail() {
     </>
   );
 }
-                <li key={f} className="flex items-start gap-3 border-t border-line pt-4">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-brand" strokeWidth={1.5} />
-                  <span className="text-[15px] text-ink">{f}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-10">
-              <PrimaryCTA to="/contact">{t("Minta Konsultasi", "Request Consultation")}</PrimaryCTA>
-            </div>
-          </div>
-          <div className="lg:col-span-5">
-            <LeadForm variant="consultation" />
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
