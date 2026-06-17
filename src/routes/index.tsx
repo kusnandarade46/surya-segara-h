@@ -249,7 +249,7 @@ function HomePage() {
             <FeatureCard
               index="06"
               icon={Wrench}
-              title={t("Kalibrasi & Pemeliharaan", "Calibration & Maintenance")}
+              title={t("Kalibrasi & Pemeliharaan", "Calibration & Maintenance Check")}
               body={t(
                 "Layanan kalibrasi tersertifikasi, pemeliharaan preventif, dan perbaikan untuk seluruh perangkat deteksi gas dan instrumen keselamatan.",
                 "Certified calibration, preventive maintenance, and repair services for all gas detection devices and safety instruments.",

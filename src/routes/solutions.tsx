@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Activity, AlertTriangle, ArrowUpRight, Radio, ShieldCheck, Wind } from "lucide-react";
+import { Activity, AlertTriangle, ArrowUpRight, Radio, ShieldCheck, Wind, Wrench } from "lucide-react";
 import { useLang } from "@/i18n";
 import { Eyebrow, PageHero } from "@/components/site/ui";
 import { LeadForm } from "@/components/site/LeadForm";
@@ -24,6 +24,7 @@ const items = [
   { slug: "emergency-response", icon: AlertTriangle, idTitle: "Tanggap Darurat", enTitle: "Emergency Response", idBody: "Pemodelan insiden, prediksi penyebaran gas, dan perencanaan respons darurat dengan SAFER One®.", enBody: "Incident modeling, gas dispersion prediction, and emergency response planning with SAFER One®." },
   { slug: "gas-detection", icon: Activity, idTitle: "Deteksi Gas", enTitle: "Gas Detection Solutions", idBody: "Sistem deteksi gas portabel dan tetap untuk semua tipe lingkungan berbahaya.", enBody: "Portable and fixed gas detection systems for every type of hazardous environment." },
   { slug: "consulting", icon: ShieldCheck, idTitle: "Konsultasi K3 Industri", enTitle: "Industrial Safety Consulting", idBody: "Penilaian risiko, desain program keselamatan, dan audit kepatuhan oleh praktisi bersertifikat.", enBody: "Risk assessments, safety program design and compliance audits by certified practitioners." },
+  { slug: "calibration-maintenance", icon: Wrench, idTitle: "Kalibrasi & Pemeliharaan", enTitle: "Calibration & Maintenance Check", idBody: "Layanan kalibrasi tersertifikasi, pemeliharaan preventif, dan perbaikan untuk seluruh perangkat deteksi gas dan instrumen keselamatan.", enBody: "Certified calibration, preventive maintenance, and repair services for all gas detection devices and safety instruments." },
 ];
 
 function SolutionsPage() {

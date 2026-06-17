@@ -63,7 +63,7 @@ const SOLUTIONS: Solution[] = [
   {
     slug: "calibration-maintenance",
     idTitle: "Kalibrasi & Pemeliharaan",
-    enTitle: "Calibration & Maintenance",
+    enTitle: "Calibration & Maintenance Check",
     idIntro: "Layanan kalibrasi tersertifikasi, pemeliharaan preventif, dan perbaikan untuk seluruh perangkat deteksi gas serta instrumen keselamatan.",
     enIntro: "Certified calibration, preventive maintenance, and repair services for all gas detection devices and safety instruments.",
     idFeatures: [

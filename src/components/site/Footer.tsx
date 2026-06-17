@@ -51,6 +51,8 @@ export function Footer() {
               { to: "/solutions/connected-safety", label: t("Connected Safety", "Connected Safety") },
               { to: "/solutions/emergency-response", label: t("Tanggap Darurat", "Emergency Response") },
               { to: "/solutions/gas-detection", label: t("Deteksi Gas", "Gas Detection") },
+              { to: "/solutions/consulting", label: t("Konsultasi K3 Industri", "Industrial Safety Consulting") },
+              { to: "/solutions/calibration-maintenance", label: t("Kalibrasi & Pemeliharaan", "Calibration & Maintenance Check") },
             ])}
             {col(t("Produk", "Products"), [
               { to: "/products/inet", label: "iNet®" },
