@@ -60,6 +60,29 @@ const SOLUTIONS: Solution[] = [
     idFeatures: ["Penilaian risiko (HIRA / JSA)", "Desain program K3", "Audit kepatuhan internal", "Roadmap teknologi keselamatan", "Pendampingan implementasi", "Pelatihan kesadaran K3"],
     enFeatures: ["Risk assessment (HIRA / JSA)", "Safety program design", "Internal compliance audits", "Safety technology roadmap", "Implementation advisory", "Safety awareness training"],
   },
+  {
+    slug: "calibration-maintenance",
+    idTitle: "Kalibrasi & Pemeliharaan",
+    enTitle: "Calibration & Maintenance",
+    idIntro: "Layanan kalibrasi tersertifikasi, pemeliharaan preventif, dan perbaikan untuk seluruh perangkat deteksi gas serta instrumen keselamatan.",
+    enIntro: "Certified calibration, preventive maintenance, and repair services for all gas detection devices and safety instruments.",
+    idFeatures: [
+      "Kalibrasi tersertifikasi terlacak ke standar internasional",
+      "Bump test dan kalibrasi otomatis dengan DSX™ Docking Station",
+      "Program pemeliharaan preventif terjadwal",
+      "Perbaikan dan penggantian sensor di workshop kami",
+      "Sertifikat kalibrasi resmi untuk audit kepatuhan",
+      "Layanan on-site dan pickup di seluruh Indonesia",
+    ],
+    enFeatures: [
+      "Certified calibration traceable to international standards",
+      "Automated bump testing and calibration with DSX™ Docking Stations",
+      "Scheduled preventive maintenance programs",
+      "In-workshop sensor repair and replacement",
+      "Official calibration certificates for compliance audits",
+      "On-site and pickup service across Indonesia",
+    ],
+  },
 ];
 
 export const Route = createFileRoute("/solutions/$slug")({

@@ -11,6 +11,8 @@ import {
   Headphones,
   Radio,
   ShieldCheck,
+  ClipboardCheck,
+  Wrench,
   Users,
   Wind,
 } from "lucide-react";
@@ -181,14 +183,14 @@ function HomePage() {
                 "Integrated Industrial Safety Solutions.",
               )}
               intro={t(
-                "Empat pilar layanan dan teknologi yang melindungi tenaga kerja, aset, dan operasi di lingkungan paling berisiko.",
-                "Four pillars of services and technology protecting workforce, assets, and operations in the highest-risk environments.",
+                "Enam pilar layanan dan teknologi yang melindungi tenaga kerja, aset, dan operasi di lingkungan paling berisiko.",
+                "Six pillars of services and technology protecting workforce, assets, and operations in the highest-risk environments.",
               )}
             />
             <GhostCTA to="/solutions">{t("Semua Solusi", "All Solutions")}</GhostCTA>
           </div>
 
-          <div className="mt-14 grid gap-px bg-line md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-px bg-line md:grid-cols-2 lg:grid-cols-3">
             <FeatureCard
               index="01"
               icon={Wind}
@@ -231,6 +233,28 @@ function HomePage() {
                 "Portable and fixed gas detection systems for hazardous environments.",
               )}
               to="/solutions/gas-detection"
+              cta={t("Pelajari", "Learn more")}
+            />
+            <FeatureCard
+              index="05"
+              icon={ClipboardCheck}
+              title={t("Konsultasi K3 Industri", "Industrial Safety Consulting")}
+              body={t(
+                "Penilaian risiko, desain program keselamatan, dan audit kepatuhan oleh praktisi bersertifikat.",
+                "Risk assessments, safety program design and compliance audits by certified practitioners.",
+              )}
+              to="/solutions/consulting"
+              cta={t("Pelajari", "Learn more")}
+            />
+            <FeatureCard
+              index="06"
+              icon={Wrench}
+              title={t("Kalibrasi & Pemeliharaan", "Calibration & Maintenance")}
+              body={t(
+                "Layanan kalibrasi tersertifikasi, pemeliharaan preventif, dan perbaikan untuk seluruh perangkat deteksi gas dan instrumen keselamatan.",
+                "Certified calibration, preventive maintenance, and repair services for all gas detection devices and safety instruments.",
+              )}
+              to="/solutions/calibration-maintenance"
               cta={t("Pelajari", "Learn more")}
             />
           </div>
