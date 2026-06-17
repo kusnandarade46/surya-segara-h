@@ -89,6 +89,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#1E2329" },
+      { property: "og:title", content: "SSH Company — Industrial Safety Technology Partner" },
+      { name: "twitter:title", content: "SSH Company — Industrial Safety Technology Partner" },
+      { name: "description", content: "Industrial Safety Hub provides advanced safety technology and H2S services for high-risk industries." },
+      { property: "og:description", content: "Industrial Safety Hub provides advanced safety technology and H2S services for high-risk industries." },
+      { name: "twitter:description", content: "Industrial Safety Hub provides advanced safety technology and H2S services for high-risk industries." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c346bc25-b45b-4e90-bd13-882c7e5727e4/id-preview-12737829--b181b89f-915e-472b-af4e-551cfe2d91cd.lovable.app-1781702715207.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c346bc25-b45b-4e90-bd13-882c7e5727e4/id-preview-12737829--b181b89f-915e-472b-af4e-551cfe2d91cd.lovable.app-1781702715207.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
