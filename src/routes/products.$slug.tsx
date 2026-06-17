@@ -206,7 +206,7 @@ function ProductDetail() {
               {t("Fitur utama.", "Key features.")}
             </h2>
             <ul className="mt-10 grid gap-4 sm:grid-cols-2">
-              {features.map((f) => (
+              {features.map((f: string) => (
                 <li key={f} className="flex items-start gap-3 border-t border-line pt-4">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-brand" strokeWidth={1.5} />
                   <span className="text-[15px] text-ink">{f}</span>
@@ -220,7 +220,7 @@ function ProductDetail() {
                 <span className="text-surface/70">{t("MANFAAT", "BENEFITS")}</span>
               </Eyebrow>
               <ul className="mt-6 space-y-5">
-                {benefits.map((b, i) => (
+                {benefits.map((b: string, i: number) => (
                   <li key={b} className="border-t border-surface/15 pt-5">
                     <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-surface/60">
                       0{i + 1}
@@ -243,7 +243,7 @@ function ProductDetail() {
               {t("Spesifikasi.", "Specifications.")}
             </h2>
             <dl className="mt-10 divide-y divide-line border-y border-line">
-              {p.specs.map((s) => (
+              {p.specs.map((s: { k: string; v: string }) => (
                 <div key={s.k} className="grid grid-cols-2 py-4 text-[15px]">
                   <dt className="font-mono text-[12px] uppercase tracking-[0.14em] text-ink-soft">{s.k}</dt>
                   <dd className="text-ink">{s.v}</dd>
@@ -278,7 +278,7 @@ function ProductDetail() {
             {t("Pertanyaan yang sering diajukan.", "Frequently asked questions.")}
           </h2>
           <div className="mt-12 grid gap-px bg-line md:grid-cols-2">
-            {p.faq.map((q, i) => (
+            {p.faq.map((q: { idQ: string; enQ: string; idA: string; enA: string }, i: number) => (
               <details key={i} className="group bg-background p-8">
                 <summary className="flex cursor-pointer items-baseline justify-between gap-6 text-[18px] font-bold tracking-[-0.01em]">
                   <span>{t(q.idQ, q.enQ)}</span>
