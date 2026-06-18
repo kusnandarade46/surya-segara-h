@@ -14,9 +14,29 @@ export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
-        const solutions = ["h2s", "connected-safety", "emergency-response", "gas-detection", "consulting"];
-        const products = ["inet", "safer-one", "ventis-pro5", "radius-bz1", "tango-tx1", "mx6-ibrid"];
-        const industries = ["oil-gas", "petrochemical", "refinery", "lng", "mining", "manufacturing"];
+        const solutions = [
+          "h2s",
+          "connected-safety",
+          "emergency-response",
+          "gas-detection",
+          "consulting",
+        ];
+        const products = [
+          "inet",
+          "safer-one",
+          "ventis-pro5",
+          "radius-bz1",
+          "tango-tx1",
+          "mx6-ibrid",
+        ];
+        const industries = [
+          "oil-gas",
+          "petrochemical",
+          "refinery",
+          "lng",
+          "mining",
+          "manufacturing",
+        ];
 
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
@@ -26,9 +46,21 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/industries", changefreq: "monthly", priority: "0.8" },
           { path: "/resources", changefreq: "weekly", priority: "0.7" },
           { path: "/contact", changefreq: "monthly", priority: "0.7" },
-          ...solutions.map((s) => ({ path: `/solutions/${s}`, changefreq: "monthly" as const, priority: "0.8" })),
-          ...products.map((p) => ({ path: `/products/${p}`, changefreq: "monthly" as const, priority: "0.8" })),
-          ...industries.map((i) => ({ path: `/industries/${i}`, changefreq: "monthly" as const, priority: "0.8" })),
+          ...solutions.map((s) => ({
+            path: `/solutions/${s}`,
+            changefreq: "monthly" as const,
+            priority: "0.8",
+          })),
+          ...products.map((p) => ({
+            path: `/products/${p}`,
+            changefreq: "monthly" as const,
+            priority: "0.8",
+          })),
+          ...industries.map((i) => ({
+            path: `/industries/${i}`,
+            changefreq: "monthly" as const,
+            priority: "0.8",
+          })),
         ];
 
         const urls = entries.map((e) =>
@@ -38,7 +70,9 @@ export const Route = createFileRoute("/sitemap.xml")({
             e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
             e.priority ? `    <priority>${e.priority}</priority>` : null,
             `  </url>`,
-          ].filter(Boolean).join("\n"),
+          ]
+            .filter(Boolean)
+            .join("\n"),
         );
 
         const xml = [

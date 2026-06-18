@@ -15,16 +15,28 @@ const schema = z.object({
 
 type Variant = "contact" | "consultation" | "demo" | "download";
 
-export function LeadForm({ variant = "contact" }: { variant?: Variant }) {
+export function LeadForm({
+  variant = "contact",
+  preFilledInterest = "",
+}: {
+  variant?: Variant;
+  preFilledInterest?: string;
+}) {
   const { t } = useLang();
   const [status, setStatus] = useState<"idle" | "ok" | "err">("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const labels = {
     contact: { title: t("Hubungi Kami", "Contact Us"), cta: t("Kirim Pesan", "Send Message") },
-    consultation: { title: t("Permintaan Konsultasi", "Request Consultation"), cta: t("Minta Konsultasi", "Request Consultation") },
+    consultation: {
+      title: t("Permintaan Konsultasi", "Request Consultation"),
+      cta: t("Minta Konsultasi", "Request Consultation"),
+    },
     demo: { title: t("Permintaan Demo", "Request Demo"), cta: t("Minta Demo", "Request Demo") },
-    download: { title: t("Unduh Brosur", "Download Brochure"), cta: t("Kirim Unduhan", "Send Download") },
+    download: {
+      title: t("Unduh Brosur", "Download Brochure"),
+      cta: t("Kirim Unduhan", "Send Download"),
+    },
   }[variant];
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -51,6 +63,7 @@ export function LeadForm({ variant = "contact" }: { variant?: Variant }) {
     required = true,
     full = false,
     as = "input",
+    defaultValue = "",
   }: {
     name: string;
     label: string;
@@ -59,6 +72,7 @@ export function LeadForm({ variant = "contact" }: { variant?: Variant }) {
     full?: boolean;
     as?: "input" | "textarea" | "select";
     options?: string[];
+    defaultValue?: string;
   }) => (
     <label className={`block ${full ? "md:col-span-2" : ""}`}>
       <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-soft">
@@ -69,6 +83,7 @@ export function LeadForm({ variant = "contact" }: { variant?: Variant }) {
           name={name}
           rows={5}
           required={required}
+          defaultValue={defaultValue}
           className="mt-2 w-full border-b border-line bg-transparent py-2.5 text-[15px] text-ink outline-none transition-colors focus:border-ink"
         />
       ) : (
@@ -76,6 +91,7 @@ export function LeadForm({ variant = "contact" }: { variant?: Variant }) {
           name={name}
           type={type}
           required={required}
+          defaultValue={defaultValue}
           className="mt-2 w-full border-b border-line bg-transparent py-2.5 text-[15px] text-ink outline-none transition-colors focus:border-ink"
         />
       )}
@@ -110,7 +126,13 @@ export function LeadForm({ variant = "contact" }: { variant?: Variant }) {
           <Field name="industry" label={t("Industri", "Industry")} required={false} />
           <Field name="email" label="Email" type="email" />
           <Field name="phone" label={t("Telepon / WhatsApp", "Phone / WhatsApp")} type="tel" />
-          <Field name="interest" label={t("Layanan Diminati", "Service Interest")} required={false} full />
+          <Field
+            name="interest"
+            label={t("Produk / Layanan Diminati", "Product / Service Interest")}
+            required={false}
+            full
+            defaultValue={preFilledInterest}
+          />
           <Field name="message" label={t("Pesan", "Message")} as="textarea" full />
           <div className="md:col-span-2 flex items-center justify-between gap-4 pt-2">
             <p className="text-[12px] text-ink-soft">

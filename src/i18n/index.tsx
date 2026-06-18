@@ -23,7 +23,9 @@ export function LangProvider({ children }: { children: ReactNode }) {
     try {
       const saved = localStorage.getItem(STORAGE_KEY) as Lang | null;
       if (saved === "id" || saved === "en") setLangState(saved);
-    } catch {}
+    } catch {
+      // ignore
+    }
   }, []);
 
   useEffect(() => {
@@ -34,7 +36,11 @@ export function LangProvider({ children }: { children: ReactNode }) {
 
   const setLang = (l: Lang) => {
     setLangState(l);
-    try { localStorage.setItem(STORAGE_KEY, l); } catch {}
+    try {
+      localStorage.setItem(STORAGE_KEY, l);
+    } catch {
+      // ignore
+    }
   };
 
   const t = (id: string, en: string) => (lang === "id" ? id : en);

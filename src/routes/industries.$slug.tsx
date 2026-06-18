@@ -5,7 +5,6 @@ import { Eyebrow, PageHero, PrimaryCTA } from "@/components/site/ui";
 import oilgasImg from "@/assets/industry-oilgas.jpg";
 import petroImg from "@/assets/industry-petrochemical.jpg";
 import refineryImg from "@/assets/industry-refinery.jpg";
-import lngImg from "@/assets/industry-lng.jpg";
 import miningImg from "@/assets/industry-mining.jpg";
 import powerImg from "@/assets/industry-power.jpg";
 
@@ -25,160 +24,243 @@ type Industry = {
 
 const INDUSTRIES: Industry[] = [
   {
-    slug: "oil-gas",
-    idName: "Minyak & Gas",
-    enName: "Oil & Gas",
-    img: oilgasImg,
-    idIntro: "Operasi hulu, midstream, dan offshore membutuhkan visibilitas paparan gas real-time dan rencana darurat yang dapat dieksekusi.",
-    enIntro: "Upstream, midstream and offshore operations require real-time gas exposure visibility and executable emergency response plans.",
-    challenges: [
-      { idQ: "Lingkungan kerja terpencil dan offshore", enQ: "Remote and offshore work environments" },
-      { idQ: "Paparan H2S dan hidrokarbon kompleks", enQ: "Complex H2S and hydrocarbon exposure" },
-      { idQ: "Kepatuhan regulasi yang ketat", enQ: "Strict regulatory compliance" },
-    ],
-    risks: [
-      { idQ: "Pelepasan H2S yang tidak terdeteksi", enQ: "Undetected H2S releases" },
-      { idQ: "Kebakaran dan ledakan", enQ: "Fire and explosion" },
-      { idQ: "Insiden confined space entry", enQ: "Confined space entry incidents" },
-    ],
-    solutions: [
-      { idQ: "Deteksi multi-gas portabel + tetap", enQ: "Portable + fixed multi-gas detection" },
-      { idQ: "iNet® untuk visibilitas armada", enQ: "iNet® for fleet visibility" },
-      { idQ: "SAFER One® untuk respons darurat", enQ: "SAFER One® for emergency response" },
-      { idQ: "Pelatihan H2S dan confined space", enQ: "H2S and confined space training" },
-    ],
-    idCase: "Operator hulu mengurangi insiden paparan 38% dalam 12 bulan setelah menggelar iNet®.",
-    enCase: "An upstream operator reduced exposure incidents by 38% in 12 months after deploying iNet®.",
-  },
-  {
-    slug: "petrochemical",
-    idName: "Petrokimia",
-    enName: "Petrochemical",
-    img: petroImg,
-    idIntro: "Kompleks petrokimia menangani bahan kimia berbahaya yang memerlukan pemantauan kontinu dan respons cepat.",
-    enIntro: "Petrochemical complexes handle hazardous chemicals that require continuous monitoring and rapid response.",
-    challenges: [
-      { idQ: "Inventaris bahan kimia yang besar", enQ: "Large hazardous chemical inventory" },
-      { idQ: "Banyak titik koneksi dan flanges", enQ: "Numerous connection points and flanges" },
-      { idQ: "Personel dan kontraktor yang banyak", enQ: "Large workforce and contractor base" },
-    ],
-    risks: [
-      { idQ: "Kebocoran VOC yang tidak terdeteksi", enQ: "Undetected VOC leaks" },
-      { idQ: "Insiden penanganan kimia", enQ: "Chemical handling incidents" },
-      { idQ: "Insiden pemeliharaan/turnaround", enQ: "Maintenance and turnaround incidents" },
-    ],
-    solutions: [
-      { idQ: "PID untuk deteksi VOC", enQ: "PID-based VOC detection" },
-      { idQ: "Monitor area Radius BZ1", enQ: "Radius BZ1 area monitors" },
-      { idQ: "Pemodelan dispersi SAFER One®", enQ: "SAFER One® dispersion modeling" },
-      { idQ: "Audit dan konsultasi K3", enQ: "Safety audits and consulting" },
-    ],
-    idCase: "Pabrik petrokimia memangkas waktu respons 55% setelah integrasi sensor ke SAFER One®.",
-    enCase: "A petrochemical plant cut response time by 55% after integrating sensors into SAFER One®.",
-  },
-  {
-    slug: "refinery",
-    idName: "Kilang",
-    enName: "Refinery",
-    img: refineryImg,
-    idIntro: "Kilang membutuhkan pemantauan H2S dan hidrokarbon yang andal di seluruh unit proses.",
-    enIntro: "Refineries need reliable H2S and hydrocarbon monitoring across every process unit.",
-    challenges: [
-      { idQ: "Banyak unit proses simultan", enQ: "Many simultaneous process units" },
-      { idQ: "Shutdown dan turnaround besar", enQ: "Large shutdowns and turnarounds" },
-      { idQ: "Pekerja dan kontraktor bercampur", enQ: "Mixed workforce and contractors" },
-    ],
-    risks: [
-      { idQ: "Paparan H2S di unit hydrotreater", enQ: "H2S exposure at hydrotreater units" },
-      { idQ: "Kebocoran fugitive emissions", enQ: "Fugitive emission leaks" },
-      { idQ: "Insiden hot work", enQ: "Hot work incidents" },
-    ],
-    solutions: [
-      { idQ: "Program H2S menyeluruh", enQ: "Comprehensive H2S program" },
-      { idQ: "Tango TX1 untuk paparan personal", enQ: "Tango TX1 for personal exposure" },
-      { idQ: "iNet® untuk pelaporan kepatuhan", enQ: "iNet® for compliance reporting" },
-      { idQ: "Layanan kalibrasi tersertifikasi", enQ: "Certified calibration services" },
-    ],
-    idCase: "Kilang mengurangi false alarm 47% setelah migrasi ke Tango TX1 DualSense™.",
-    enCase: "A refinery reduced false alarms by 47% after migrating to Tango TX1 DualSense™.",
-  },
-  {
-    slug: "lng",
-    idName: "LNG",
-    enName: "LNG",
-    img: lngImg,
-    idIntro: "Terminal LNG menuntut deteksi kebocoran metana yang sensitif dan pemodelan dispersi yang akurat.",
-    enIntro: "LNG terminals demand sensitive methane leak detection and accurate dispersion modeling.",
-    challenges: [
-      { idQ: "Kriogenik dan tekanan tinggi", enQ: "Cryogenic and high-pressure operations" },
-      { idQ: "Risiko pelepasan metana", enQ: "Methane release risk" },
-      { idQ: "Operasi marine loading", enQ: "Marine loading operations" },
-    ],
-    risks: [
-      { idQ: "Vapor cloud explosion", enQ: "Vapor cloud explosion" },
-      { idQ: "Asphyxiation di area tertutup", enQ: "Asphyxiation in enclosed areas" },
-      { idQ: "Insiden marine loading", enQ: "Marine loading incidents" },
-    ],
-    solutions: [
-      { idQ: "Detektor IR untuk metana", enQ: "IR detectors for methane" },
-      { idQ: "SAFER One® untuk pemodelan dispersi", enQ: "SAFER One® for dispersion modeling" },
-      { idQ: "Radius BZ1 untuk zona berbahaya", enQ: "Radius BZ1 for hazard zones" },
-      { idQ: "Latihan tanggap darurat berkala", enQ: "Regular emergency response drills" },
-    ],
-    idCase: "Operator LNG mengurangi insiden 42% setelah implementasi iNet® dan SAFER One®.",
-    enCase: "An LNG operator reduced incidents by 42% after deploying iNet® and SAFER One®.",
-  },
-  {
     slug: "mining",
     idName: "Pertambangan",
     enName: "Mining",
     img: miningImg,
-    idIntro: "Tambang terbuka dan bawah tanah memerlukan visibilitas keselamatan pekerja yang berkelanjutan.",
-    enIntro: "Open-pit and underground mines require continuous worker safety visibility.",
+    idIntro:
+      "Operasi pertambangan batubara dan mineral membutuhkan keandalan armada alat berat raksasa dan pemantauan kondisi mesin secara real-time untuk memastikan produktivitas 24 jam sehari.",
+    enIntro:
+      "Coal and mineral mining operations require the extreme reliability of massive heavy equipment and real-time machine condition monitoring to secure 24/7 productivity.",
     challenges: [
-      { idQ: "Lingkungan berdebu dan keras", enQ: "Dusty and harsh environments" },
-      { idQ: "Pekerja jarak jauh dan terisolasi", enQ: "Remote and isolated workers" },
-      { idQ: "Akumulasi gas di bawah tanah", enQ: "Underground gas accumulation" },
+      {
+        idQ: "Beban kerja ekstrim nonstop 24 jam sehari",
+        enQ: "Extreme nonstop 24-hour daily workload",
+      },
+      {
+        idQ: "Kondisi jalan tambang berdebu dan berlumpur",
+        enQ: "Harsh, dusty, and muddy haul road conditions",
+      },
+      {
+        idQ: "Tuntutan menekan biaya operasional per ton bahan tambang",
+        enQ: "Strict demands to lower operating cost-per-ton",
+      },
     ],
     risks: [
-      { idQ: "Paparan CO dan NO2", enQ: "CO and NO2 exposure" },
-      { idQ: "Kekurangan oksigen", enQ: "Oxygen deficiency" },
-      { idQ: "Insiden man-down", enQ: "Man-down incidents" },
+      {
+        idQ: "Kerugian finansial masif akibat downtime alat berat",
+        enQ: "Massive financial losses due to equipment downtime",
+      },
+      {
+        idQ: "Kecelakaan kerja akibat area kerja berbahaya",
+        enQ: "Workplace accidents in high-risk operating environments",
+      },
+      {
+        idQ: "Kerusakan dini komponen utama mesin",
+        enQ: "Premature failure of major engine components",
+      },
     ],
     solutions: [
-      { idQ: "Ventis Pro5 dengan LENS™ mesh", enQ: "Ventis Pro5 with LENS™ mesh" },
-      { idQ: "iNet® untuk lokasi pekerja", enQ: "iNet® for worker location" },
-      { idQ: "MX6 iBrid untuk confined space", enQ: "MX6 iBrid for confined space" },
-      { idQ: "Pelatihan keselamatan tambang", enQ: "Mining safety training" },
+      {
+        idQ: "Cat MineStar™ untuk kontrol armada otomatis",
+        enQ: "Cat MineStar™ for automated fleet management",
+      },
+      {
+        idQ: "Excavator tambang raksasa (Cat 349 / Cat 395)",
+        enQ: "Large mining excavators (Cat 349 / Cat 395)",
+      },
+      {
+        idQ: "Layanan analisis pelumas berkala (S·O·S℠)",
+        enQ: "Scheduled Oil Sampling (S·O·S℠) fluid analysis",
+      },
+      {
+        idQ: "Kontrak pemeliharaan CVA untuk kepastian suku cadang",
+        enQ: "Customer Value Agreements (CVA) for parts availability",
+      },
     ],
-    idCase: "Tambang batubara meningkatkan kepatuhan paparan ke 99,1% dalam 6 bulan.",
-    enCase: "A coal mine raised exposure compliance to 99.1% within 6 months.",
+    idCase:
+      "Perusahaan tambang batu bara meningkatkan produktivitas armada 18% dalam 12 bulan menggunakan Cat MineStar™.",
+    enCase:
+      "A coal mining company increased fleet productivity by 18% in 12 months using Cat MineStar™.",
   },
   {
-    slug: "manufacturing",
-    idName: "Manufaktur",
-    enName: "Manufacturing",
-    img: powerImg,
-    idIntro: "Fasilitas manufaktur dan pembangkit listrik menggabungkan banyak risiko paparan dan kepatuhan.",
-    enIntro: "Manufacturing and power generation facilities combine multiple exposure and compliance risks.",
+    slug: "construction",
+    idName: "Konstruksi",
+    enName: "Construction",
+    img: refineryImg,
+    idIntro:
+      "Proyek pembangunan infrastruktur jalan tol, jembatan, dan perumahan menuntut ketepatan waktu pengerjaan, efisiensi konsumsi bahan bakar solar, dan keluwesan rental.",
+    enIntro:
+      "Highway, bridge, and housing infrastructure projects demand strict project scheduling, fuel efficiency, and flexible rental options.",
     challenges: [
-      { idQ: "Banyak titik proses dan utilitas", enQ: "Many process and utility points" },
-      { idQ: "Kepatuhan ESH internasional", enQ: "International EHS compliance" },
-      { idQ: "Confined space entry rutin", enQ: "Routine confined space entry" },
+      {
+        idQ: "Tenggat waktu penyelesaian proyek yang sangat ketat",
+        enQ: "Highly aggressive project completion deadlines",
+      },
+      {
+        idQ: "Lokasi kerja di area perkotaan yang sempit dan padat",
+        enQ: "Tight work locations in crowded urban areas",
+      },
+      {
+        idQ: "Variabilitas jenis material tanah dan cuaca hujan",
+        enQ: "Soil/material variability and wet weather conditions",
+      },
     ],
     risks: [
-      { idQ: "Paparan amonia atau klorin", enQ: "Ammonia or chlorine exposure" },
-      { idQ: "Insiden boiler/utilitas", enQ: "Boiler/utility incidents" },
-      { idQ: "Insiden kontraktor", enQ: "Contractor incidents" },
+      {
+        idQ: "Denda keterlambatan penyerahan proyek pembangunan",
+        enQ: "Late delivery fines from project owners",
+      },
+      {
+        idQ: "Biaya solar yang membengkak karena idle time mesin",
+        enQ: "Inflated fuel costs due to high machine idle time",
+      },
+      {
+        idQ: "Kerusakan mesin akibat keterlambatan servis berkala",
+        enQ: "Machine failure due to neglected routine servicing",
+      },
     ],
     solutions: [
-      { idQ: "Deteksi gas portabel + tetap", enQ: "Portable + fixed gas detection" },
-      { idQ: "iNet® untuk standardisasi armada", enQ: "iNet® for fleet standardization" },
-      { idQ: "Konsultasi K3 industri", enQ: "Industrial safety consulting" },
-      { idQ: "Audit kepatuhan internal", enQ: "Internal compliance audits" },
+      {
+        idQ: "Excavator Cat 320 GC hemat solar hingga 20%",
+        enQ: "Fuel-efficient Cat 320 GC (up to 20% fuel savings)",
+      },
+      {
+        idQ: "Sewa unit cepat & fleksibel via Cat Rental Store",
+        enQ: "Fast & flexible rentals via Cat Rental Store",
+      },
+      {
+        idQ: "Teknologi perataan tanah presisi Cat Grade",
+        enQ: "High-precision Cat Grade earth leveling technology",
+      },
+      {
+        idQ: "Layanan perbaikan darurat cepat oleh mekanik Trakindo",
+        enQ: "Rapid emergency breakdown service by Trakindo mechanics",
+      },
     ],
-    idCase: "Pabrik manufaktur menstandarisasi 600+ detektor lewat iNet® dalam 3 bulan.",
-    enCase: "A manufacturing plant standardized 600+ detectors via iNet® in 3 months.",
+    idCase:
+      "Kontraktor pembangunan jalan tol menghemat 15 hari masa kerja penggalian dengan menggunakan Cat 320 GC.",
+    enCase: "A toll road contractor saved 15 working days of excavation using Cat 320 GC.",
+  },
+  {
+    slug: "forestry-agriculture",
+    idName: "Kehutanan & Perkebunan",
+    enName: "Forestry & Agriculture",
+    img: petroImg,
+    idIntro:
+      "Mekanisasi industri kelapa sawit, perkebunan tebu, dan konsesi kehutanan membutuhkan alat berat serbaguna dengan attachment khusus untuk pembersihan lahan dan pemanenan di medan lunak.",
+    enIntro:
+      "Palm oil, sugarcane, and forestry industrial mechanization require highly versatile equipment with specialized attachments for land preparation and harvesting in soft terrains.",
+    challenges: [
+      {
+        idQ: "Medan tanah gambut basah dan rawa berlumpur",
+        enQ: "Wet peatlands and muddy swamp terrains",
+      },
+      {
+        idQ: "Kebutuhan attachment serbaguna (grapple, mulcher)",
+        enQ: "Need for diverse attachments (grapples, mulchers)",
+      },
+      {
+        idQ: "Akses logistik servis di pedalaman perkebunan",
+        enQ: "Remote access for maintenance support logistics",
+      },
+    ],
+    risks: [
+      {
+        idQ: "Unit amblas atau slip di tanah gambut lunak",
+        enQ: "Units sinking or slipping in soft peat soils",
+      },
+      {
+        idQ: "Overheating mesin akibat tumpukan ranting kayu",
+        enQ: "Engine overheating caused by forest debris buildup",
+      },
+      {
+        idQ: "Terhambatnya panen karena kerusakan unit alat berat",
+        enQ: "Harvest delays due to critical machine breakdowns",
+      },
+    ],
+    solutions: [
+      {
+        idQ: "Mini Excavator Cat 305.5E2 lincah di area sempit",
+        enQ: "Agile Cat 305.5E2 mini excavators for tight areas",
+      },
+      {
+        idQ: "Undercarriage track shoe khusus rawa yang lebar",
+        enQ: "Wide swamp track shoe undercarriage options",
+      },
+      {
+        idQ: "Attachment grapple dan mulcher resmi Caterpillar",
+        enQ: "Official Caterpillar forestry grapples and mulchers",
+      },
+      {
+        idQ: "Dukungan mekanik mobile Trakindo di pedalaman",
+        enQ: "Trakindo's mobile field service support in remote estates",
+      },
+    ],
+    idCase:
+      "Perkebunan kelapa sawit di Sumatra memangkas biaya pembersihan lahan 22% menggunakan mini excavator Cat.",
+    enCase:
+      "A palm oil plantation in Sumatra cut land prep costs by 22% using Cat mini excavators.",
+  },
+  {
+    slug: "power-generation",
+    idName: "Pembangkit Listrik",
+    enName: "Power Generation",
+    img: powerImg,
+    idIntro:
+      "Ketersediaan suplai daya listrik mandiri dan backup power darurat sangat penting untuk menjaga kelangsungan operasional pabrik manufaktur, rumah sakit rujukan, dan pusat data.",
+    enIntro:
+      "Autonomous prime electricity supply and standby emergency backup power are vital to secure manufacturing plants, referral hospitals, and data centers.",
+    challenges: [
+      {
+        idQ: "Kebutuhan toleransi beban kejut listrik dinamo besar",
+        enQ: "High transient block-load tolerance requirements",
+      },
+      {
+        idQ: "Respons start-up cepat genset darurat (< 10 detik)",
+        enQ: "Ultra-fast emergency genset start-up speed (< 10 seconds)",
+      },
+      {
+        idQ: "Kepatuhan emisi gas buang dan kebisingan suara kota",
+        enQ: "Strict urban exhaust emission and sound decibel controls",
+      },
+    ],
+    risks: [
+      {
+        idQ: "Kerusakan produk/mesin pabrik akibat blackout listrik",
+        enQ: "Factory product/machinery damage due to power blackout",
+      },
+      {
+        idQ: "Hilangnya data penting server di data center",
+        enQ: "Critical server data loss in high-tech data centers",
+      },
+      {
+        idQ: "Biaya operasional solar melonjak tinggi",
+        enQ: "Inflated fuel operational costs during prolonged power outages",
+      },
+    ],
+    solutions: [
+      {
+        idQ: "Genset diesel Cat DE33GC & DE150GC andal",
+        enQ: "Reliable Cat DE33GC & DE150GC diesel generators",
+      },
+      {
+        idQ: "Sistem otomatisasi switch ATS/AMF darurat",
+        enQ: "Automated ATS/AMF emergency switch systems",
+      },
+      {
+        idQ: "Genset berbahan bakar gas Cat efisiensi tinggi",
+        enQ: "High-efficiency Caterpillar gas generator sets",
+      },
+      {
+        idQ: "Kontrak pemeliharaan kelistrikan preventif Trakindo",
+        enQ: "Trakindo's preventive electrical maintenance agreements",
+      },
+    ],
+    idCase:
+      "Rumah sakit rujukan di Jakarta menjamin kelancaran ruang operasi kritis dengan genset backup Cat DE150GC.",
+    enCase:
+      "A major referral hospital in Jakarta secured critical operating rooms with Cat DE150GC backup genset.",
   },
 ];
 
@@ -192,9 +274,9 @@ export const Route = createFileRoute("/industries/$slug")({
     const i = loaderData!;
     return {
       meta: [
-        { title: `${i.enName} Safety Solutions — SSH Company` },
+        { title: `Solusi Alat Berat Cat Industri ${i.enName} — Trakindo Utama` },
         { name: "description", content: i.enIntro },
-        { property: "og:title", content: `${i.enName} — SSH Company` },
+        { property: "og:title", content: `${i.enName} — Trakindo Utama` },
         { property: "og:description", content: i.enIntro },
         { property: "og:url", content: `/industries/${i.slug}` },
       ],
@@ -208,7 +290,15 @@ function IndustryDetail() {
   const i = Route.useLoaderData();
   const { t } = useLang();
 
-  const Col = ({ title, items, icon }: { title: string; items: { idQ: string; enQ: string }[]; icon?: "warn" | "ok" }) => (
+  const Col = ({
+    title,
+    items,
+    icon,
+  }: {
+    title: string;
+    items: { idQ: string; enQ: string }[];
+    icon?: "warn" | "ok";
+  }) => (
     <div>
       <Eyebrow>{title}</Eyebrow>
       <ul className="mt-6 space-y-4">
@@ -231,7 +321,9 @@ function IndustryDetail() {
       <section className="relative border-b border-line bg-secondary text-surface">
         <div className="container-ssh grid gap-10 py-20 md:py-28 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <div className="eyebrow text-brand-foreground/80">{t("INDUSTRI", "INDUSTRY")}</div>
+            <div className="eyebrow text-brand-foreground/80">
+              {t("APLIKASI INDUSTRI", "INDUSTRIAL APPLICATION")}
+            </div>
             <h1 className="mt-5 text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[0.98] tracking-[-0.03em]">
               {t(i.idName, i.enName)}
             </h1>
@@ -241,7 +333,14 @@ function IndustryDetail() {
           </div>
           <div className="lg:col-span-5">
             <div className="aspect-[4/3] overflow-hidden bg-background">
-              <img src={i.img} alt={i.enName} loading="lazy" width={1200} height={900} className="h-full w-full object-cover" />
+              <img
+                src={i.img}
+                alt={i.enName}
+                loading="lazy"
+                width={1200}
+                height={900}
+                className="h-full w-full object-cover animate-fade-in"
+              />
             </div>
           </div>
         </div>
@@ -249,16 +348,16 @@ function IndustryDetail() {
 
       <section className="border-b border-line bg-background">
         <div className="container-ssh grid gap-12 py-20 md:py-28 lg:grid-cols-3">
-          <Col title={t("TANTANGAN", "CHALLENGES")} items={i.challenges} />
-          <Col title={t("RISIKO KESELAMATAN", "SAFETY RISKS")} items={i.risks} icon="warn" />
-          <Col title={t("SOLUSI SSH", "SSH SOLUTIONS")} items={i.solutions} />
+          <Col title={t("TANTANGAN OPERASIONAL", "OPERATIONAL CHALLENGES")} items={i.challenges} />
+          <Col title={t("RISIKO DOWNTIME", "DOWNTIME RISKS")} items={i.risks} icon="warn" />
+          <Col title={t("SOLUSI TRAKINDO", "TRAKINDO SOLUTIONS")} items={i.solutions} />
         </div>
       </section>
 
       <section className="border-b border-line bg-surface">
         <div className="container-ssh grid gap-10 py-20 md:py-28 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <Eyebrow>{t("PREVIEW STUDI KASUS", "CASE STUDY PREVIEW")}</Eyebrow>
+            <Eyebrow>{t("STUDI KASUS SUKSES", "SUCCESS CASE STUDY")}</Eyebrow>
             <h2 className="mt-5 text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-tight tracking-[-0.025em]">
               {t(i.idCase, i.enCase)}
             </h2>
@@ -266,12 +365,14 @@ function IndustryDetail() {
           <div className="flex flex-col items-start justify-end lg:col-span-5">
             <p className="text-[16px] leading-relaxed text-ink-soft">
               {t(
-                "Diskusikan kasus penggunaan Anda dengan tim spesialis SSH untuk roadmap implementasi yang disesuaikan.",
-                "Discuss your use case with the SSH specialist team for a tailored implementation roadmap.",
+                "Hubungi perwakilan spesialis industri kami untuk menganalisis armada alat berat Cat yang ideal demi meningkatkan return of investment (ROI) proyek Anda.",
+                "Contact our industry specialists to analyze the ideal Cat heavy equipment fleet to optimize your project's ROI.",
               )}
             </p>
             <div className="mt-6">
-              <PrimaryCTA to="/contact">{t("Diskusi dengan Spesialis", "Talk to a Specialist")}</PrimaryCTA>
+              <PrimaryCTA to="/contact">
+                {t("Diskusi dengan Spesialis", "Talk to a Specialist")}
+              </PrimaryCTA>
             </div>
           </div>
         </div>

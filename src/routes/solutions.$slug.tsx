@@ -16,71 +16,105 @@ type Solution = {
 
 const SOLUTIONS: Solution[] = [
   {
-    slug: "h2s",
-    idTitle: "Layanan H2S",
-    enTitle: "H2S Services",
-    idIntro: "Program perlindungan H2S menyeluruh — dari pemantauan lapangan, pelatihan operator, hingga konsultasi kepatuhan.",
-    enIntro: "A complete H2S protection program — from on-site monitoring and operator training to compliance consulting.",
-    idFeatures: ["Pemantauan H2S 24/7 di lapangan", "Pelatihan operator bersertifikat", "Penyewaan peralatan deteksi", "Audit dan konsultasi kepatuhan", "Rencana respons darurat khusus H2S", "Penilaian risiko H2S menyeluruh"],
-    enFeatures: ["On-site 24/7 H2S monitoring", "Certified operator training", "Detection equipment rental", "Compliance audits and consulting", "H2S-specific emergency response planning", "Comprehensive H2S risk assessment"],
-  },
-  {
-    slug: "connected-safety",
-    idTitle: "Connected Safety Solutions",
-    enTitle: "Connected Safety Solutions",
-    idIntro: "Visibilitas real-time terhadap setiap pekerja, perangkat, dan paparan — didukung oleh iNet®.",
-    enIntro: "Real-time visibility into every worker, device, and exposure — powered by iNet®.",
-    idFeatures: ["Lokasi pekerja real-time", "Manajemen armada perangkat", "Peringatan paparan otomatis", "Dasbor kepatuhan terpusat", "Integrasi dengan sistem SCADA", "Laporan insiden otomatis"],
-    enFeatures: ["Real-time worker location", "Device fleet management", "Automatic exposure alerts", "Centralized compliance dashboard", "SCADA system integration", "Automated incident reporting"],
-  },
-  {
-    slug: "emergency-response",
-    idTitle: "Emergency Response Solutions",
-    enTitle: "Emergency Response Solutions",
-    idIntro: "Pemodelan, prediksi, dan eksekusi tanggap darurat dengan SAFER One® — platform yang dipercaya oleh operator kritis.",
-    enIntro: "Modeling, prediction and execution of emergency response with SAFER One® — the platform trusted by mission-critical operators.",
-    idFeatures: ["Pemodelan penyebaran gas dinamis", "Prediksi area dampak", "Manajemen sumber daya darurat", "Latihan dan simulasi darurat", "Integrasi sensor real-time", "Pelaporan pasca-insiden"],
-    enFeatures: ["Dynamic gas dispersion modeling", "Impact area prediction", "Emergency resource management", "Drills and emergency simulations", "Real-time sensor integration", "Post-incident reporting"],
-  },
-  {
-    slug: "gas-detection",
-    idTitle: "Gas Detection Solutions",
-    enTitle: "Gas Detection Solutions",
-    idIntro: "Portofolio lengkap deteksi gas portabel dan tetap untuk setiap lingkungan berbahaya.",
-    enIntro: "A complete portfolio of portable and fixed gas detection for every hazardous environment.",
-    idFeatures: ["Deteksi multi-gas portabel", "Sistem deteksi gas tetap", "Sensor PID untuk VOC", "Sensor inframerah untuk hidrokarbon", "Kalibrasi dan bump test otomatis", "Layanan kalibrasi tersertifikasi"],
-    enFeatures: ["Portable multi-gas detection", "Fixed gas detection systems", "PID sensors for VOCs", "Infrared sensors for hydrocarbons", "Automated calibration and bump testing", "Certified calibration services"],
-  },
-  {
-    slug: "consulting",
-    idTitle: "Industrial Safety Consulting",
-    enTitle: "Industrial Safety Consulting",
-    idIntro: "Praktisi keselamatan bersertifikat membantu merancang dan mengaudit program keselamatan Anda.",
-    enIntro: "Certified safety practitioners help design and audit your safety program.",
-    idFeatures: ["Penilaian risiko (HIRA / JSA)", "Desain program K3", "Audit kepatuhan internal", "Roadmap teknologi keselamatan", "Pendampingan implementasi", "Pelatihan kesadaran K3"],
-    enFeatures: ["Risk assessment (HIRA / JSA)", "Safety program design", "Internal compliance audits", "Safety technology roadmap", "Implementation advisory", "Safety awareness training"],
-  },
-  {
-    slug: "calibration-maintenance",
-    idTitle: "Kalibrasi & Pemeliharaan",
-    enTitle: "Calibration & Maintenance Check",
-    idIntro: "Layanan kalibrasi tersertifikasi, pemeliharaan preventif, dan perbaikan untuk seluruh perangkat deteksi gas serta instrumen keselamatan.",
-    enIntro: "Certified calibration, preventive maintenance, and repair services for all gas detection devices and safety instruments.",
+    slug: "rental",
+    idTitle: "Cat Rental Store",
+    enTitle: "Cat Rental Store",
+    idIntro:
+      "Opsi sewa (rental) alat berat Caterpillar yang fleksibel untuk menjaga produktivitas proyek Anda tetap berjalan tepat waktu tanpa beban kepemilikan aset jangka panjang.",
+    enIntro:
+      "Flexible Caterpillar heavy equipment rental options to keep your project productivity running on time without long-term asset ownership burdens.",
     idFeatures: [
-      "Kalibrasi tersertifikasi terlacak ke standar internasional",
-      "Bump test dan kalibrasi otomatis dengan DSX™ Docking Station",
-      "Program pemeliharaan preventif terjadwal",
-      "Perbaikan dan penggantian sensor di workshop kami",
-      "Sertifikat kalibrasi resmi untuk audit kepatuhan",
-      "Layanan on-site dan pickup di seluruh Indonesia",
+      "Sewa fleksibel harian, mingguan, atau bulanan",
+      "Armada berumur muda dengan pemeliharaan resmi standar Cat",
+      "Dukungan teknisi standby langsung di lokasi proyek",
+      "Pilihan sewa unit lepas kunci atau dengan operator tersertifikasi",
+      "Penggantian unit cepat jika terjadi kendala teknis (minimum downtime)",
+      "Akses armada sewa lengkap dari excavator, grader, hingga genset",
     ],
     enFeatures: [
-      "Certified calibration traceable to international standards",
-      "Automated bump testing and calibration with DSX™ Docking Stations",
-      "Scheduled preventive maintenance programs",
-      "In-workshop sensor repair and replacement",
-      "Official calibration certificates for compliance audits",
-      "On-site and pickup service across Indonesia",
+      "Flexible daily, weekly, or monthly rental options",
+      "Young fleet maintained strictly to official Cat standards",
+      "On-site standby technician support directly at your worksite",
+      "Bare rental or certified operator rental options",
+      "Fast replacement units to guarantee minimum downtime",
+      "Access to a complete rental fleet including excavators, graders, and gensets",
+    ],
+  },
+  {
+    slug: "parts",
+    idTitle: "Cat Parts",
+    enTitle: "Cat Parts (parts.cat.com)",
+    idBody:
+      "Akses mudah ke jutaan suku cadang asli Caterpillar secara online 24/7 dengan jaminan keaslian dan presisi tinggi.",
+    idIntro:
+      "Suku cadang resmi asli Caterpillar untuk memastikan daya tahan, efisiensi bahan bakar, dan umur pakai alat berat Anda tetap maksimal.",
+    enIntro:
+      "Genuine Caterpillar spare parts to ensure durability, fuel efficiency, and maximum service life of your heavy equipment.",
+    idFeatures: [
+      "Pemesanan online 24/7 via parts.cat.com",
+      "Jaminan suku cadang 100% asli dari Caterpillar",
+      "Jaringan distribusi dan pengiriman cepat ke seluruh Indonesia",
+      "Pemeriksaan kecocokan part otomatis berdasarkan Serial Number mesin",
+      "Opsi komponen rekondisi resmi (Cat Reman) yang ekonomis",
+      "Bantuan teknis pencarian part oleh spesialis Trakindo",
+    ],
+    enFeatures: [
+      "24/7 online ordering via parts.cat.com",
+      "100% genuine Caterpillar parts guarantee",
+      "Fast distribution and delivery network across Indonesia",
+      "Automated compatibility checks using machine Serial Numbers",
+      "Economical official remanufactured parts (Cat Reman) options",
+      "Dedicated parts lookup assistance by Trakindo specialists",
+    ],
+  },
+  {
+    slug: "services",
+    idTitle: "Layanan Pemeliharaan",
+    enTitle: "Maintenance & Service",
+    idIntro:
+      "Kontrak pemeliharaan resmi, servis berkala, perbaikan darurat 24/7, dan rebuild unit oleh teknisi ahli tersertifikasi Caterpillar untuk menjaga uptime armada Anda.",
+    enIntro:
+      "Customer Value Agreements (CVA), scheduled maintenance, 24/7 emergency repairs, and unit rebuilds by certified Caterpillar technicians to secure your fleet uptime.",
+    idFeatures: [
+      "Kontrak Pemeliharaan Resmi (Customer Value Agreement - CVA)",
+      "Servis berkala preventif terjadwal di lokasi proyek",
+      "Layanan servis darurat 24/7 di lapangan",
+      "Uji emisi dan pemantauan kondisi oli mesin secara rutin (S·O·S℠)",
+      "Program rekonstruksi alat berat menyeluruh (Cat Certified Rebuild)",
+      "Teknisi ahli berpengalaman dengan sertifikasi resmi Caterpillar",
+    ],
+    enFeatures: [
+      "Customer Value Agreements (CVA) tailored to your budget",
+      "Scheduled preventive maintenance directly at your worksite",
+      "24/7 on-site emergency breakdown repairs",
+      "Scheduled Oil Sampling (S·O·S℠) and fluid analysis services",
+      "Comprehensive machine rebuilding (Cat Certified Rebuild program)",
+      "Highly experienced technicians with official Caterpillar certification",
+    ],
+  },
+  {
+    slug: "financing",
+    idTitle: "Skema Pembiayaan & Promo",
+    enTitle: "Financing & Promos",
+    idIntro:
+      "Program pembiayaan bisnis yang fleksibel dari Cat Financial serta promosi khusus untuk membantu kepemilikan alat berat Caterpillar menjadi lebih mudah.",
+    enIntro:
+      "Flexible business financing options from Cat Financial and special promotions to make owning Caterpillar heavy equipment easier and more affordable.",
+    idFeatures: [
+      "Opsi uang muka rendah dan tenor cicilan fleksibel",
+      "Program cicilan dengan suku bunga spesial (seperti Promo BINTANG)",
+      "Proses persetujuan pembiayaan yang cepat dan transparan",
+      "Pilihan skema Sewa Guna Usaha (Finance Lease / Operating Lease)",
+      "Paket bundling unit baru beserta kontrak pemeliharaan & parts",
+      "Dukungan konsultan finansial B2B berpengalaman untuk perencanaan investasi",
+    ],
+    enFeatures: [
+      "Low down payment options and flexible installment tenors",
+      "Special low-interest rate campaigns (such as the BINTANG Promo)",
+      "Fast and transparent credit approval process",
+      "Finance Lease and Operating Lease options",
+      "Bundled packages combining equipment purchase, CVA, and parts",
+      "Support from experienced B2B financial consultants to optimize your ROI",
     ],
   },
 ];
@@ -95,9 +129,9 @@ export const Route = createFileRoute("/solutions/$slug")({
     const s = loaderData!;
     return {
       meta: [
-        { title: `${s.enTitle} — SSH Company` },
+        { title: `${s.enTitle} — Solusi Trakindo Utama` },
         { name: "description", content: s.enIntro },
-        { property: "og:title", content: `${s.enTitle} — SSH Company` },
+        { property: "og:title", content: `${s.enTitle} — Trakindo Utama` },
         { property: "og:description", content: s.enIntro },
         { property: "og:url", content: `/solutions/${s.slug}` },
       ],
@@ -115,7 +149,7 @@ function SolutionDetail() {
   return (
     <>
       <PageHero
-        eyebrow={t("SOLUSI", "SOLUTION")}
+        eyebrow={t("SOLUSI TRAKINDO", "TRAKINDO SOLUTION")}
         title={t(s.idTitle, s.enTitle)}
         intro={t(s.idIntro, s.enIntro)}
       />
@@ -125,7 +159,7 @@ function SolutionDetail() {
           <div className="lg:col-span-7">
             <Eyebrow>{t("CAKUPAN LAYANAN", "SCOPE OF SERVICE")}</Eyebrow>
             <h2 className="mt-5 text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-tight tracking-[-0.025em]">
-              {t("Apa yang termasuk.", "What's included.")}
+              {t("Detail layanan kami.", "What our service includes.")}
             </h2>
             <ul className="mt-10 grid gap-4 sm:grid-cols-2">
               {features.map((f: string) => (
@@ -136,11 +170,13 @@ function SolutionDetail() {
               ))}
             </ul>
             <div className="mt-10">
-              <PrimaryCTA to="/contact">{t("Minta Konsultasi", "Request Consultation")}</PrimaryCTA>
+              <PrimaryCTA to="/contact">
+                {t("Minta Penawaran Harga", "Request a Quote Proposal")}
+              </PrimaryCTA>
             </div>
           </div>
           <div className="lg:col-span-5">
-            <LeadForm variant="consultation" />
+            <LeadForm variant="consultation" preFilledInterest={`${s.idTitle} Service Request`} />
           </div>
         </div>
       </section>

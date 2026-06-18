@@ -78,24 +78,50 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SSH Company — Industrial Safety Technology Partner" },
+      { title: "Trakindo Digital Platform — Solusi Alat Berat & Suku Cadang Cat" },
       {
         name: "description",
         content:
-          "SSH Company (Surya Segara Hana) — H2S Services, Gas Detection, iNet Connected Safety, and SAFER One Emergency Response for Oil & Gas, Petrochemical, Mining, and Energy operations.",
+          "Temukan alat berat Caterpillar baru & bekas, layanan sewa (rental) cepat, suku cadang resmi Cat Parts, dan servis berkala untuk menjaga uptime armada Anda di Trakindo Utama.",
       },
-      { name: "author", content: "PT Surya Segara Hana" },
-      { property: "og:site_name", content: "SSH Company" },
+      { name: "author", content: "PT Trakindo Utama" },
+      { property: "og:site_name", content: "Trakindo Utama" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "theme-color", content: "#1E2329" },
-      { property: "og:title", content: "SSH Company — Industrial Safety Technology Partner" },
-      { name: "twitter:title", content: "SSH Company — Industrial Safety Technology Partner" },
-      { name: "description", content: "Industrial Safety Hub provides advanced safety technology and H2S services for high-risk industries." },
-      { property: "og:description", content: "Industrial Safety Hub provides advanced safety technology and H2S services for high-risk industries." },
-      { name: "twitter:description", content: "Industrial Safety Hub provides advanced safety technology and H2S services for high-risk industries." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c346bc25-b45b-4e90-bd13-882c7e5727e4/id-preview-12737829--b181b89f-915e-472b-af4e-551cfe2d91cd.lovable.app-1781702715207.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c346bc25-b45b-4e90-bd13-882c7e5727e4/id-preview-12737829--b181b89f-915e-472b-af4e-551cfe2d91cd.lovable.app-1781702715207.png" },
+      { name: "theme-color", content: "#FFC20E" },
+      {
+        property: "og:title",
+        content: "Trakindo Digital Platform — Solusi Alat Berat & Suku Cadang Cat",
+      },
+      {
+        name: "twitter:title",
+        content: "Trakindo Digital Platform — Solusi Alat Berat & Suku Cadang Cat",
+      },
+      {
+        name: "description",
+        content:
+          "Temukan alat berat Caterpillar baru & bekas, layanan sewa (rental) cepat, suku cadang resmi Cat Parts, dan servis berkala untuk menjaga uptime armada Anda di Trakindo Utama.",
+      },
+      {
+        property: "og:description",
+        content:
+          "Temukan alat berat Caterpillar baru & bekas, layanan sewa (rental) cepat, suku cadang resmi Cat Parts, dan servis berkala untuk menjaga uptime armada Anda di Trakindo Utama.",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Temukan alat berat Caterpillar baru & bekas, layanan sewa (rental) cepat, suku cadang resmi Cat Parts, dan servis berkala untuk menjaga uptime armada Anda di Trakindo Utama.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c346bc25-b45b-4e90-bd13-882c7e5727e4/id-preview-12737829--b181b89f-915e-472b-af4e-551cfe2d91cd.lovable.app-1781702715207.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c346bc25-b45b-4e90-bd13-882c7e5727e4/id-preview-12737829--b181b89f-915e-472b-af4e-551cfe2d91cd.lovable.app-1781702715207.png",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -112,11 +138,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "PT Surya Segara Hana",
-          alternateName: "SSH Company",
+          name: "PT Trakindo Utama",
+          alternateName: "Trakindo CAT",
           url: "/",
           description:
-            "Industrial Safety Technology and H2S Services partner for high-risk operations.",
+            "Mitra penyedia alat berat Caterpillar, suku cadang resmi Cat Parts, dan layanan sewa (rental) terpercaya di Indonesia.",
           address: { "@type": "PostalAddress", addressLocality: "Jakarta", addressCountry: "ID" },
         }),
       },

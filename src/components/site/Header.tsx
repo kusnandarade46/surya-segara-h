@@ -20,14 +20,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-surface/95 backdrop-blur supports-[backdrop-filter]:bg-surface/80">
       <div className="container-ssh flex h-16 items-center justify-between gap-6 md:h-20">
-        <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <span className="grid h-8 w-8 place-items-center bg-brand text-brand-foreground font-mono text-[13px] font-bold">
-            S
+        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
+          <span className="grid h-8 w-12 place-items-center bg-brand text-brand-foreground font-mono text-[14px] font-black tracking-tighter transform skew-x-[-6deg]">
+            CAT
           </span>
           <span className="flex flex-col leading-none">
-            <span className="text-[15px] font-bold tracking-tight text-ink">SSH</span>
-            <span className="text-[10px] uppercase tracking-[0.18em] text-ink-soft">
-              Surya Segara Hana
+            <span className="text-[16px] font-extrabold tracking-tight text-ink">Trakindo</span>
+            <span className="text-[8px] uppercase tracking-[0.18em] text-ink-soft font-mono">
+              PT Trakindo Utama
             </span>
           </span>
         </Link>
@@ -37,7 +37,7 @@ export function Header() {
             <Link
               key={n.to}
               to={n.to}
-              className="text-[13px] font-medium text-ink hover-underline"
+              className="text-[13px] font-semibold text-ink hover-underline"
               activeProps={{ className: "text-brand" }}
               activeOptions={{ exact: n.to === "/" }}
             >
@@ -65,9 +65,9 @@ export function Header() {
           </div>
           <Link
             to="/contact"
-            className="hidden bg-brand px-4 py-2.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-brand-foreground transition-colors hover:bg-brand/90 md:inline-flex"
+            className="hidden bg-brand px-4 py-2.5 text-[12px] font-bold uppercase tracking-[0.12em] text-brand-foreground transition-colors hover:bg-brand/80 md:inline-flex"
           >
-            {t("Konsultasi", "Consultation")}
+            {t("Minta Penawaran", "Request Quote")}
           </Link>
           <button
             className="grid h-10 w-10 place-items-center border border-line lg:hidden"

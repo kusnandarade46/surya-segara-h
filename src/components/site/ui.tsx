@@ -30,14 +30,20 @@ export function SectionHeader({
       <h2 className="mt-4 text-[clamp(2rem,5vw,3.5rem)] leading-[1.02] font-bold tracking-[-0.025em] text-ink">
         {title}
       </h2>
-      {intro && (
-        <p className="mt-5 max-w-2xl text-[17px] leading-relaxed text-ink-soft">{intro}</p>
-      )}
+      {intro && <p className="mt-5 max-w-2xl text-[17px] leading-relaxed text-ink-soft">{intro}</p>}
     </div>
   );
 }
 
-export function PrimaryCTA({ to, href, children }: { to?: string; href?: string; children: ReactNode }) {
+export function PrimaryCTA({
+  to,
+  href,
+  children,
+}: {
+  to?: string;
+  href?: string;
+  children: ReactNode;
+}) {
   const cls =
     "group inline-flex items-center gap-3 bg-brand px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-brand-foreground transition-colors hover:bg-brand/90";
   const inner = (
@@ -92,11 +98,14 @@ export function FeatureCard({
         <span className="font-mono text-[11px] tracking-[0.18em] text-ink-soft">{index}</span>
         {Icon && <Icon className="h-5 w-5 text-brand" strokeWidth={1.5} />}
       </div>
-      <h3 className="mt-12 text-[22px] font-bold leading-tight tracking-[-0.02em] text-ink">{title}</h3>
+      <h3 className="mt-12 text-[22px] font-bold leading-tight tracking-[-0.02em] text-ink">
+        {title}
+      </h3>
       <p className="mt-3 text-[15px] leading-relaxed text-ink-soft">{body}</p>
       {to && cta && (
         <div className="mt-8 flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink">
-          {cta} <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          {cta}{" "}
+          <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </div>
       )}
     </div>

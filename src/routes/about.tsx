@@ -7,14 +7,17 @@ import controlImg from "@/assets/about-controlroom.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About SSH Company — Industrial Safety Technology Partner Indonesia" },
+      { title: "Tentang PT Trakindo Utama — Dealer Resmi Caterpillar Indonesia" },
       {
         name: "description",
         content:
-          "PT Surya Segara Hana (SSH Company) — over 10 years delivering H2S Services, gas detection and connected safety solutions. Vision, mission, leadership, and certifications.",
+          "Profil PT Trakindo Utama, penyedia alat berat Caterpillar resmi sejak 1970 di Indonesia. Visi, misi, nilai inti, dan kepemimpinan.",
       },
-      { property: "og:title", content: "About SSH Company" },
-      { property: "og:description", content: "10+ years of industrial safety technology expertise in Indonesia." },
+      { property: "og:title", content: "Tentang Trakindo Utama" },
+      {
+        property: "og:description",
+        content: "Dealer resmi Caterpillar terpercaya di Indonesia selama lebih dari 50 tahun.",
+      },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
@@ -26,24 +29,59 @@ function AboutPage() {
   const { t } = useLang();
 
   const values = [
-    { icon: ShieldCheck, k: t("Keselamatan", "Safety"), d: t("Tidak ada kompromi terhadap keselamatan manusia, aset, dan lingkungan.", "Zero compromise on the safety of people, assets and the environment.") },
-    { icon: Handshake, k: t("Integritas", "Integrity"), d: t("Transparan, etis, dan bertanggung jawab dalam setiap keputusan.", "Transparent, ethical and accountable in every decision.") },
-    { icon: Lightbulb, k: t("Inovasi", "Innovation"), d: t("Mengadopsi teknologi terdepan untuk hasil yang lebih baik.", "Adopting leading technology for measurably better outcomes.") },
-    { icon: Sparkles, k: t("Keunggulan", "Excellence"), d: t("Standar tinggi pada setiap layanan dan penyerahan proyek.", "High standards across every service and project delivery.") },
-    { icon: Target, k: t("Kemitraan", "Partnership"), d: t("Membangun hubungan jangka panjang dengan klien dan mitra.", "Building long-term relationships with clients and partners.") },
+    {
+      icon: Handshake,
+      k: t("Integritas", "Integrity"),
+      d: t(
+        "Mengutamakan kejujuran, etika bisnis tinggi, dan transparansi dalam setiap hubungan kemitraan.",
+        "Prioritizing honesty, high business ethics, and transparency in every partnership relationship.",
+      ),
+    },
+    {
+      icon: ShieldCheck,
+      k: t("Keselamatan", "Safety"),
+      d: t(
+        "Menjamin keselamatan kerja nol kecelakaan (zero harm) bagi karyawan, pelanggan, dan mitra di lapangan.",
+        "Guaranteeing zero-accident K3 work safety for employees, customers, and partners in the field.",
+      ),
+    },
+    {
+      icon: Lightbulb,
+      k: t("Pengembangan", "Continuous Growth"),
+      d: t(
+        "Senantiasa berinovasi meningkatkan kompetensi SDM dan integrasi teknologi digital terbaru.",
+        "Constantly innovating to improve human resources competency and integrate the latest digital technologies.",
+      ),
+    },
+    {
+      icon: Sparkles,
+      k: t("Keunggulan", "Excellence"),
+      d: t(
+        "Berkomitmen memberikan standar kualitas servis dan suku cadang asli terbaik demi kepuasan pelanggan.",
+        "Committed to delivering the highest quality standards of service and original parts for customer satisfaction.",
+      ),
+    },
+    {
+      icon: Target,
+      k: t("Kerjasama", "Teamwork"),
+      d: t(
+        "Membangun kolaborasi erat lintas tim dan kemitraan jangka panjang yang saling menguntungkan.",
+        "Building close collaboration across teams and mutually beneficial long-term partnerships.",
+      ),
+    },
   ];
 
   return (
     <>
       <PageHero
-        eyebrow={t("TENTANG SSH COMPANY", "ABOUT SSH COMPANY")}
+        eyebrow={t("TENTANG TRAKINDO UTAMA", "ABOUT TRAKINDO UTAMA")}
         title={t(
-          "Lebih dari satu dekade melindungi operasi industri Indonesia.",
-          "Over a decade protecting Indonesia's industrial operations.",
+          "Lebih dari setengah abad memajukan industri dan infrastruktur Indonesia.",
+          "Over half a century advancing Indonesia's industries and infrastructure.",
         )}
         intro={t(
-          "PT Surya Segara Hana adalah penyedia teknologi keselamatan industri terkemuka, melayani operator Minyak & Gas, Petrokimia, LNG, Pertambangan, dan Energi di seluruh Indonesia.",
-          "PT Surya Segara Hana is a leading industrial safety technology provider, serving Oil & Gas, Petrochemical, LNG, Mining and Energy operators across Indonesia.",
+          "PT Trakindo Utama adalah dealer resmi Caterpillar di Indonesia, didirikan pada tahun 1970. Kami menyediakan solusi alat berat, generator set, suku cadang asli, dan layanan purnajual komprehensif bagi industri pertambangan, konstruksi, perkebunan, dan energi.",
+          "PT Trakindo Utama is the authorized Caterpillar dealer in Indonesia, founded in 1970. We deliver comprehensive heavy equipment solutions, gensets, genuine parts, and product support for mining, construction, agriculture, and energy sectors.",
         )}
       />
 
@@ -52,28 +90,35 @@ function AboutPage() {
         <div className="container-ssh grid gap-12 py-20 md:py-24 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <div className="aspect-[4/3] overflow-hidden bg-secondary">
-              <img src={controlImg} alt="SSH control room" loading="lazy" width={1600} height={1000} className="h-full w-full object-cover" />
+              <img
+                src={controlImg}
+                alt="Trakindo monitoring room"
+                loading="lazy"
+                width={1600}
+                height={1000}
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
           <div className="lg:col-span-7">
-            <Eyebrow>01 — {t("CERITA KAMI", "OUR STORY")}</Eyebrow>
+            <Eyebrow>01 — {t("SEJARAH KAMI", "OUR HISTORY")}</Eyebrow>
             <h2 className="mt-5 text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-tight tracking-[-0.025em]">
               {t(
-                "Dibangun di Jakarta. Dipercaya di lapangan paling berisiko.",
-                "Built in Jakarta. Trusted on the highest-risk worksites.",
+                "Didirikan pada tahun 1970. Melayani dengan dedikasi di seluruh Indonesia.",
+                "Founded in 1970. Serving with dedication across the Indonesian archipelago.",
               )}
             </h2>
             <div className="mt-7 space-y-4 text-[16px] leading-relaxed text-ink-soft">
               <p>
                 {t(
-                  "SSH Company didirikan untuk menjawab tantangan keselamatan yang nyata di sektor migas dan industri berat Indonesia. Sejak awal, kami fokus pada satu hal: memberikan teknologi dan layanan keselamatan terbaik yang dapat diandalkan setiap hari.",
-                  "SSH Company was founded to address real safety challenges in Indonesia's oil & gas and heavy industry sectors. From day one we have focused on one thing: delivering the best safety technology and services that operators can rely on every day.",
+                  "Trakindo Utama didirikan oleh A.H. Hamami pada tanggal 23 Desember 1970. Pada tahun 1971, kami secara resmi ditunjuk menjadi dealer tunggal Caterpillar di Indonesia. Perjalanan kami dibangun di atas integritas, komitmen tinggi untuk kemajuan industri, dan dedikasi mendukung infrastruktur nasional.",
+                  "Trakindo Utama was founded by A.H. Hamami on December 23, 1970. In 1971, we were officially appointed as the sole Caterpillar dealer in Indonesia. Our journey is built on integrity, high commitment to industrial advancement, and dedication to supporting national infrastructure.",
                 )}
               </p>
               <p>
                 {t(
-                  "Sebagai mitra resmi Industrial Scientific, kami menghadirkan portofolio lengkap — dari deteksi gas portabel dan tetap, platform iNet Connected Safety, hingga perangkat lunak tanggap darurat SAFER One.",
-                  "As an authorized partner of Industrial Scientific, we bring a complete portfolio — from portable and fixed gas detection to the iNet Connected Safety platform and SAFER One emergency response software.",
+                  "Hari ini, dengan didukung oleh lebih dari 60 cabang dan pusat servis dari Sumatra hingga Papua, kami siap menjamin kelancaran operasional alat berat Cat Anda dengan ketersediaan mekanik ahli dan suku cadang asli Cat Parts.",
+                  "Today, supported by more than 60 branches and service centers spanning from Sumatra to Papua, we guarantee the smooth operation of your Cat equipment with expert technicians and genuine Cat Parts availability.",
                 )}
               </p>
             </div>
@@ -87,24 +132,28 @@ function AboutPage() {
           <div className="bg-background p-10 md:p-16">
             <div className="flex items-center gap-3">
               <Eye className="h-6 w-6 text-brand" strokeWidth={1.5} />
-              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-soft">02 — {t("VISI", "VISION")}</span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-soft">
+                02 — {t("VISI", "VISION")}
+              </span>
             </div>
-            <h2 className="mt-6 text-[clamp(1.75rem,3.5vw,2.5rem)] font-bold leading-tight tracking-[-0.02em]">
+            <h2 className="mt-6 text-[clamp(1.75rem,3.5vw,2.5rem)] font-bold leading-tight tracking-[-0.02em] text-secondary">
               {t(
-                "Menjadi mitra teknologi keselamatan industri paling tepercaya di Asia Tenggara.",
-                "To be Southeast Asia's most trusted industrial safety technology partner.",
+                "Menjadi penyedia solusi kelas dunia untuk peralatan Caterpillar di Indonesia.",
+                "To be a world-class solution provider for Caterpillar equipment in Indonesia.",
               )}
             </h2>
           </div>
           <div className="bg-background p-10 md:p-16">
             <div className="flex items-center gap-3">
               <Flag className="h-6 w-6 text-brand" strokeWidth={1.5} />
-              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-soft">03 — {t("MISI", "MISSION")}</span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-soft">
+                03 — {t("MISI", "MISSION")}
+              </span>
             </div>
-            <h2 className="mt-6 text-[clamp(1.75rem,3.5vw,2.5rem)] font-bold leading-tight tracking-[-0.02em]">
+            <h2 className="mt-6 text-[clamp(1.75rem,3.5vw,2.5rem)] font-bold leading-tight tracking-[-0.02em] text-secondary">
               {t(
-                "Melindungi tenaga kerja, aset, dan operasi melalui teknologi, keahlian, dan layanan terbaik di kelasnya.",
-                "To protect workforce, assets and operations through best-in-class technology, expertise and service.",
+                "Mendirikan perusahaan yang mampu menciptakan lapangan kerja berkualitas, melayani purnajual prima, dan memberikan nilai tambah luar biasa bagi stakeholders.",
+                "To establish a company that creates high-quality employment, delivers excellent product support, and creates outstanding value for stakeholders.",
               )}
             </h2>
           </div>
@@ -114,33 +163,22 @@ function AboutPage() {
       {/* Values */}
       <section className="border-b border-line bg-surface">
         <div className="container-ssh py-24 md:py-32">
-          <SectionHeader index="04 — CORE VALUES" eyebrow={t("NILAI INTI", "CORE VALUES")} title={t("Nilai inti yang memandu setiap keputusan.", "Core values guiding every decision.")} />
+          <SectionHeader
+            index="04 — CORE VALUES"
+            eyebrow={t("NILAI-NILAI INTI", "CORE VALUES")}
+            title={t(
+              "Prinsip Utama yang Menjadi Pondasi Bisnis Kami.",
+              "Core Principles That Outline Our Business Foundation.",
+            )}
+          />
           <div className="mt-14 grid gap-px bg-line md:grid-cols-3 lg:grid-cols-5">
             {values.map(({ icon: Icon, k, d }) => (
               <div key={k} className="bg-surface p-8">
                 <Icon className="h-6 w-6 text-brand" strokeWidth={1.5} />
-                <h3 className="mt-6 text-[18px] font-bold tracking-[-0.01em]">{k}</h3>
+                <h3 className="mt-6 text-[18px] font-bold tracking-[-0.01em] text-secondary">
+                  {k}
+                </h3>
                 <p className="mt-2 text-[14px] leading-relaxed text-ink-soft">{d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="border-b border-line bg-background">
-        <div className="container-ssh py-24 md:py-32">
-          <SectionHeader index="05 — LEADERSHIP" eyebrow={t("TIM KEPEMIMPINAN", "LEADERSHIP TEAM")} title={t("Dipimpin oleh praktisi industri.", "Led by industry practitioners.")} />
-          <div className="mt-14 grid gap-px bg-line md:grid-cols-3">
-            {[
-              { n: "Budi Santoso", r: t("Direktur Utama", "Chief Executive Officer") },
-              { n: "Ratna Wijaya", r: t("Direktur Operasi", "Chief Operating Officer") },
-              { n: "Andi Prasetyo", r: t("Kepala Teknologi", "Chief Technology Officer") },
-            ].map((p) => (
-              <div key={p.n} className="bg-background p-8">
-                <div className="aspect-square w-full bg-surface-alt" />
-                <h3 className="mt-6 text-[20px] font-bold tracking-[-0.02em]">{p.n}</h3>
-                <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-soft">{p.r}</p>
               </div>
             ))}
           </div>
@@ -151,22 +189,37 @@ function AboutPage() {
       <section className="border-b border-line bg-secondary text-surface">
         <div className="container-ssh grid gap-14 py-24 md:grid-cols-12">
           <div className="md:col-span-5">
-            <Eyebrow>06 — {t("SERTIFIKASI & MITRA", "CERTIFICATIONS & PARTNERS")}</Eyebrow>
+            <Eyebrow>05 — {t("SERTIFIKASI & STANDARDISASI", "CERTIFICATIONS & STANDARDS")}</Eyebrow>
             <h2 className="mt-5 text-[clamp(2rem,4vw,3rem)] font-bold leading-[1.05] tracking-[-0.025em]">
-              {t("Standar terverifikasi. Kemitraan strategis.", "Verified standards. Strategic partnerships.")}
+              {t(
+                "Komitmen terhadap Kualitas, Keselamatan, & Lingkungan.",
+                "Commitment to Quality, Safety, & Environment.",
+              )}
             </h2>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed text-surface/70">
               {t(
-                "Operasi kami diaudit terhadap standar internasional, dan teknologi yang kami tawarkan didukung oleh kemitraan eksklusif.",
-                "Our operations are audited against international standards, and the technology we deliver is backed by exclusive partnerships.",
+                "Seluruh jaringan operasional Trakindo diaudit secara berkala untuk mematuhi standar internasional manajemen mutu, keselamatan K3, dan pengelolaan lingkungan hijau.",
+                "Trakindo's entire operational network is audited periodically to comply with international standards in quality, occupational health and safety, and environmental management.",
               )}
             </p>
           </div>
           <div className="md:col-span-7">
             <div className="grid grid-cols-2 gap-px bg-surface/10 sm:grid-cols-3">
-              {["ISO 9001:2015", "OHSAS 18001", "ISO 14001", "K3 KEMNAKER", "MIGAS", "ESDM",
-                "INDUSTRIAL SCIENTIFIC", "SAFER SYSTEMS", "TÜV"].map((c) => (
-                <div key={c} className="bg-secondary p-6 text-center font-mono text-[12px] uppercase tracking-[0.16em] text-surface/80">
+              {[
+                "ISO 9001:2015",
+                "ISO 14001:2015",
+                "ISO 45001:2018",
+                "CATERPILLAR 5-STAR SERVICE",
+                "K3 KEMNAKER RI",
+                "PROPER HIJAU",
+                "ISO 37001:2016",
+                "OHSAS 18001",
+                "TÜV RHEINLAND",
+              ].map((c) => (
+                <div
+                  key={c}
+                  className="bg-secondary p-6 text-center font-mono text-[12px] uppercase tracking-[0.16em] text-surface/80 flex items-center justify-center"
+                >
                   {c}
                 </div>
               ))}
